@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-primary: #10b981; /* Emerald 500 */
+  --color-primary-dark: #059669; /* Emerald 600 */
+  --color-secondary: #6366f1; /* Indigo 500 */
+  --color-accent: #f59e0b; /* Amber 500 */
+  --color-bg-soft: #f8fafc; /* Slate 50 */
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-bg-soft text-slate-900;
+  }
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-sm border border-slate-200 shadow-sm rounded-2xl;
+}
+
+.btn-primary {
+  @apply px-6 py-3 bg-primary text-white font-semibold rounded-xl transition-all hover:bg-primary-dark active:scale-95 disabled:opacity-50;
+}
+
+.btn-outline {
+  @apply px-6 py-3 border-2 border-slate-200 text-slate-600 font-semibold rounded-xl transition-all hover:border-primary hover:text-primary active:scale-95;
+}
+
+.option-btn {
+  @apply px-4 py-2 bg-white border border-slate-200 rounded-lg text-slate-700 font-medium transition-all hover:border-secondary hover:text-secondary hover:shadow-sm;
+}
+
+.option-btn-selected {
+  @apply bg-secondary text-white border-secondary;
+}
